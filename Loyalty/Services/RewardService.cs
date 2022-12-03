@@ -48,7 +48,7 @@ public class RewardService:IRewardService
 
 
         var existingRewardWithName = await _rewardRepository.FindByNameAsync(reward.Name);
-        var existingRewardWithFleeId = await _rewardRepository.FindByFleetIdAsync(reward.fleetId);
+        var existingRewardWithFleeId = await _rewardRepository.FindByFleetIdAsync(fleeId);
 
 
         if ( existingRewardWithFleeId != null) {
