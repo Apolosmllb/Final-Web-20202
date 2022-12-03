@@ -41,12 +41,6 @@ public class RewardService:IRewardService
 
     public async Task<RewardResponse> SaveAsync(Reward reward, int fleeId)
     {
-
-       
-
-      
-
-
         var existingRewardWithName = await _rewardRepository.FindByNameAsync(reward.Name);
         var existingRewardWithFleeId = await _rewardRepository.FindByFleetIdAsync(fleeId);
 
